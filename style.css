@@ -1,0 +1,124 @@
+/* Importing the Poppins font with a weight of 500 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Basic reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body styling */
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #240750, #344C64, #577B8D, #57A6A1);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+/* Animation for background color shifting */
+@keyframes color {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+}
+
+/* Calculator container styling */
+.calculator {
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    box-shadow: 0px 3px 15px rgb(0, 0, 0);
+}
+
+/* Input box styling */
+input {
+    width: 320px; 
+    border: none;
+    padding: 24px;
+    margin: 10px 0; 
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+    font-size: 40px;
+    text-align: right;
+    color: #ffffff;
+}
+
+/* Placeholder styling for input */
+input::placeholder {
+    color: white;
+}
+
+/* General button styling */
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    box-shadow: rgb(255, 255, 255) 0px 2px 4px 0px, rgb(255, 255, 255) 0px 2px 16px 0px;
+}
+
+/* Styling for the equal button */
+.equalBtn {
+    background-color: #fb7c14;
+}
+
+/* Styling for operator buttons */
+.operator {
+    color: #6dee0a;
+}
+
+/* Responsive styling for tablets */
+@media (max-width: 768px) {
+    .calculator {
+        width: 90%; 
+    }
+
+    input {
+        font-size: 2em; 
+        padding: 15px; 
+    }
+
+    button {
+        width: 50px; 
+        height: 50px; 
+        font-size: 1.2em; 
+    }
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 480px) {
+    .calculator {
+        width: 320px;
+        padding: 10px; 
+    }
+
+    input {
+        width: 300px;
+        font-size: 1.5em; 
+    }
+
+    button {
+        width: 45px; 
+        height: 45px; 
+        font-size: 1em; 
+        margin: 5px; 
+    }
+}
